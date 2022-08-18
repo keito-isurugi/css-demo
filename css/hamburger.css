@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+
+/*==================================================
+　5-2-4 MENUがCLOSEに
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn4{
+  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+  background:#D54884;
+  cursor: pointer;
+  width: 50px;
+  height:50px;
+  border-radius: 5px;
+  z-index : 3;
+}
+
+/*ボタン内側*/
+.openbtn4 span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    border-radius: 5px;
+    background: #fff;
+    width: 45%;
+  }
+
+
+.openbtn4 span:nth-of-type(1) {
+  top:13px; 
+}
+
+.openbtn4 span:nth-of-type(2) {
+  top:19px;
+}
+
+.openbtn4 span:nth-of-type(3) {
+  top:25px;
+}
+
+.openbtn4 span:nth-of-type(3)::after {
+  content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+  position: absolute;
+  top:5px;
+  left:-2px;
+  color: #fff;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+
+.openbtn4.active span:nth-of-type(1) {
+    top: 14px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn4.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn4.active span:nth-of-type(3){
+    top: 26px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+.openbtn4.active span:nth-of-type(3)::after {
+  content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+  transform: translateY(0) rotate(-45deg);
+  top:5px;
+  left:4px;
+}
+
+
+
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #fff;
+  background: rgba(0,0,0);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .6s ease, visibility .6s ease;
+  height: 100%;
+  overflow: scroll;
+}
+
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: .4s all;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+nav.globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: #fff;
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+  opacity: 100;
+
+}
+
+
+
+/*==================================================
+　5-2-8 3本線が横方向に回転して×に
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn8{
+  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+  background:#EC6015;
+  cursor: pointer;
+  width: 50px;
+  height:50px;
+  border-radius: 5px;
+  z-index : 3;
+}
+
+/*ボタン内側*/
+.openbtn8 .openbtn-area{
+  transition: all .6s;/*アニメーションの設定*/
+  width:50px;
+  height:50px;
+}
+
+.openbtn8 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    width: 45%;
+  }
+
+.openbtn8 span:nth-of-type(1) {
+  top:15px; 
+}
+
+.openbtn8 span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn8 span:nth-of-type(3) {
+  top:31px;
+}
+
+/*activeクラスが付与されると .openbtn-areaが360度回転し、その中の線が回転して×に*/
+.openbtn8.active .openbtn-area{
+  transform: rotate(360deg);
+}
+.openbtn8.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+.openbtn8.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.openbtn8.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+nav.globalMenuSp2 {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #000;
+  background: #fff;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: all 0.9s;
+  width: 100%;
+}
+nav.globalMenuSp2 ul {
+  background: #ccc;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+nav.globalMenuSp2 ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+nav.globalMenuSp2 ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+nav.globalMenuSp2 ul li:hover{
+  background :#ddd;
+}
+nav.globalMenuSp2 ul li a {
+  display: block;
+  color: #000;
+  padding: 1em 0;
+  text-decoration :none;
+}
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp2.active {
+  transform: translateY(0%);
+}
+
+
+/*==================================================
+おりじなる
+===================================*/
+.ham{
+  position: relative;
+  background:blue;
+  cursor: pointer;
+  width: 50px;
+  height:50px;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+/*ボタン内側*/
+.ham .ham-inner{
+  transition: all .6s;/*アニメーションの設定*/
+  width:50px;
+  height:50px;
+}
+
+.ham span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  width: 45%;
+}
+
+.ham span:nth-of-type(1) {
+  top:13px; 
+}
+
+.ham span:nth-of-type(2) {
+  top:19px;
+}
+
+.ham span:nth-of-type(3) {
+  top:25px;
+}
+
+.ham.active .ham-inner{
+  transform: rotate(360deg);
+}
+
+.ham.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.ham.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.ham.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+nav.globalMenuSp3 {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #000;
+  background: #fff;
+  text-align: center;
+  transform: translateX(100%);
+  transition: all 0.6s;
+  width: 100%;
+}
+
+nav.globalMenuSp3 ul {
+  background: #ccc;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.globalMenuSp3 ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+nav.globalMenuSp3 ul li:last-child {
+  padding-bottom: 0;
+}
+nav.globalMenuSp3 ul li a:hover{
+  color:#fff;
+}
+
+nav.globalMenuSp3 ul li a {
+  display: block;
+  color: #000;
+  padding: 1.5em 0;
+  text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp3.active {
+  transform: translateX(0%);
+}
+
+
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  background:#f3f3f3;
+    padding:20px;
+}
+
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+.lead{
+  margin:20px 0 0 0;
+}
+
+.btn-block{
+  width:200px;  
+  padding: 30px;
+}

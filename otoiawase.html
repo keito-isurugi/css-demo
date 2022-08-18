@@ -1,0 +1,120 @@
+<!-- HTML -->
+<form id="mailform">
+  <div>
+    <label for="nameval">名前<span>(必須)</span></label> <input
+    type="text" name="nameval" id="nameval" required />
+  </div>
+  <div>
+    <label for="mailval">メールアドレス<span>(必須)</span></label> <input
+    type="email" name="mailval" id="mailval" required />
+  </div>
+  <div>
+    <label for="urlval">ウェブサイト</label> <input
+    type="text" name="urlval" id="urlval" />
+  </div>
+  <div>
+    <label for="textval">内容<span>(必須)</span></label> <textarea
+    name="textval" id="textval" rows="12" required></textarea>
+  </div>
+  <p class="contact-submit">
+    <input type="submit" value="送信 »" id="submit"> <input
+    id="referrer" type="hidden" name="referrer" />
+  </p>
+</form>
+<div id="dispmsg"></div>
+ 
+<!-- スタイルシート -->
+<div>
+<style>
+#mailform input[type='text'],
+#mailform input[type='email'] {
+  font-size: 1em;
+  width: 300px;
+  max-width: 100%;
+  margin-bottom: 13px;
+  box-sizing: border-box;
+}
+#mailform input,
+#mailform button {
+  height: 40px;
+  padding: 0 10px;
+}
+#mailform textarea {
+  font-size: 1em;
+  margin-bottom: 13px;
+  padding: 2px 5px;
+  width:100%;
+  box-sizing: border-box;
+}
+#mailform label {
+  margin-bottom: 3px;
+  font-weight: bold;
+  display: block;
+}
+#mailform label span {
+  color: #aaa;
+  margin-left: 4px;
+  font-weight: normal;
+}
+#submit{
+  width:200px;
+}
+#dispmsg > p{
+  border: 3px solid #ffe3b3;
+  background: #ffffeb;
+  border-radius: 7px;
+  padding: 15px;
+  margin: 30px 0;
+  text-align: center;
+  font-weight: bold;
+}
+#dispmsg blockquote {
+  margin: 30px 0;
+  padding: 15px;
+  background-color: #f3f3f3
+}
+#dispmsg pre {
+  font-family: -apple-system,BlinkMacSystemFont,Meiryo,Verdana,
+  "Helvetica Neue","Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3",sans-serif;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  background: #fafafa;
+  margin: 15px 0 0;
+  padding: 10px;
+}
+#dispmsg #errmsg{
+  background: #fff5f5;
+  border: 3px solid #fcc;
+  color: #e1536a;
+}
+</style>
+</div>
+ 
+<!-- JavaScript -->
+<div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+jQuery(function ($) {
+  $("#referrer").val(document.referrer);
+  $("#mailform").submit(function(){ 
+    $.ajax({
+      url : 'PHPソースコードのパス',
+      type: 'POST',
+      dataType: 'json',
+      data: $(this).serialize()
+    })
+    .done( function(data){
+      $("#dispmsg").empty();
+      $("#dispmsg").html(data.dispmsg);
+      if(data.errflg != 1){
+        $("#mailform").remove();
+      }
+    })
+    .fail( function(data){
+      alert('メール送信に失敗しました');
+    })
+    return false;
+  });
+});
+</script>
+</div>

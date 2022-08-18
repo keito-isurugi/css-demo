@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="css/masonry.css">
+<script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+<title>jQuery Masonry Demo</title>
+<!--[if lte IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+<h1>jQuery Masonry Demo</h1>
+</header>
+<div>
+<section class="alignleft box1">
+</section>
+<section class="alignleft box2">
+</section>
+<section class="alignleft box3">
+</section>
+<section class="alignleft box4">
+</section>
+<section class="alignleft box5">
+</section>
+<section class="alignleft box6">
+</section>
+
+</div>
+
+<footer>
+<small><a href="http://webgaku.hateblo.jp">http://webgaku.hateblo.jp</a></small>
+</footer>
+<script>
+  $(function(){
+  $('article').masonry({
+      //  itemSelector : 'section',
+      //  isAnimated: true,
+      //  isFitWidth: true
+  });
+});
+</script>
+<script src="http://webgaku.biz/js/jquery.masonry.min.js"></script>
+</body>
+</html>   

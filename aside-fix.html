@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+  <title>サイドバー固定</title>
+</head>
+<body>
+  <style>
+    .flex {
+      display: flex;
+      width: 1000px;
+      margin: 0 auto;
+      gap: 0 20px;
+      position: relative;
+    }
+    .fix{
+      border: 2px solid #000;
+      width: 20%;
+      height: 100px;
+      position: absolute;
+      /* position: sticky;
+      top: 0; */
+    }
+    .right{
+      border: 2px solid red;
+      width: 80%;
+      height: 2000px;
+    }
+
+    #wrap {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    #main {
+      width: 69%;
+      border: 2px solid red;
+      width: 80%;
+      height: 2000px;
+    }
+
+    #sidebar {
+      position: absolute;
+      right: 0;
+      width: 29%;
+      border: 2px solid #000;
+      width: 20%;
+      height: 100px;
+    }
+  </style>
+  
+  <div class="flex">
+    <div class="fix">
+    </div>
+    <div class="right">
+    </div>
+  </div>
+
+  <!-- <div id="wrap">˜
+    <main id="main">
+      hoge
+    </main>
+    
+    <div id="sidebar">
+      hoge
+    </div> -->
+</div>
+<script>
+  $(window).on('load', function () {
+
+    var adjust = 0; //スクロール時のトップ位置調整用（問題なければ0）
+    var sidebar = $('.fix'); //サイドバーを指定
+    var wrap = $('.flex'); //ラッパーを指定
+
+    var adjustTop = 0;
+    var sidebarTop = parseInt(sidebar.css('top'));
+    var sidebarMax = wrap.height() + adjust - sidebar.height();
+
+    $(window).on('scroll', function () {
+        
+        var h = sidebarTop + $(window).scrollTop();
+        
+        if (h < sidebarMax) {
+            
+            if($(window).scrollTop() < adjust) {
+                adjustTop = 0;
+            } else {
+                adjustTop = adjust;
+            }
+            var offset = sidebarTop-adjustTop + $(window).scrollTop() + 'px';
+            sidebar.animate({top: offset},{duration:500, queue: false});
+        }
+    });
+  });
+</script>
+</body>
+</html>

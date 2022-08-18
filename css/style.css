@@ -1,0 +1,834 @@
+/*--------------------------
+ テーブルについて
+--------------------------*/
+table td {
+	background: #eee;
+}
+table tr:nth-child(even) td {
+	background: #fff;
+}
+
+/*--------------------------
+dl,dt,dd
+--------------------------*/
+form{
+  margin-left: 20px;
+}
+.flex-dl{
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+}
+.flex-dl > dt{
+  border-top: 1px solid rgb(179, 175, 175);
+  border-left: 1px solid rgb(179, 175, 175);
+  border-right: 1px solid rgb(228, 228, 228);
+  width: 200px;
+  height: 80px;
+  background-color: ghostwhite;
+  padding: 10px;
+  display: flex;
+  align-items    : center;
+  /* margin-bottom: 1px; */
+
+}
+.flex-dl >  dd{
+  border-top: 1px solid rgb(179, 175, 175);
+  border-right: 1px solid rgb(179, 175, 175);
+  margin: 0;
+  /* margin-bottom: 1px; */
+  width: 400px;
+  text-align: left;
+  padding: 10px;
+  
+}
+.last-border{
+  border-bottom: 1px solid rgb(179, 175, 175);
+}
+textarea, select, input {
+  background: #f8f8f8;
+  display: block;
+  font-size: 16px;
+  transition: 0.8s;
+  border-radius: 3px;
+  border: 1px solid #c2c0c0;
+}
+
+
+/*--------------------------
+カレント表示
+--------------------------*/
+.global-nav > li{
+  width: 100px;
+}
+
+.current {
+  background-color: aqua;
+
+}
+
+
+
+/*--------------------------
+dlをtable化
+--------------------------*/
+.table-dl > dl {
+display:table;
+background: #F2F2F2;
+}
+
+.table-dl > dt {
+vertical-align:middle;
+display:table-cell;
+text-align: center;
+}
+
+.table-dl > dd {
+display:table-cell;
+}
+/*--------------------------
+ボタンのデザイン
+--------------------------*/
+
+.btn-div{
+
+}
+.btn-1{
+  
+}
+.btn-2{
+
+}
+.btn-3{
+
+}
+.btn-4{
+
+}
+
+.btn-a{
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+  background-color: rgb(180, 255, 180);
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+
+.button05 a {
+  display: block;
+  width: 300px;
+  color: #333;
+  background-color: #cccccc;
+  box-shadow: 0 5px 0 #aaaaaa;
+  transition: 0.1s;
+}
+
+.button05 a:hover {
+  transform: translateY(3px);
+  text-decoration: none;
+  box-shadow: 0 2px 0 #aaaaaa;
+}
+
+/*--------------------------
+Slickスライダー
+--------------------------*/
+.slider{
+  width: 300px;
+}
+
+.slider img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+.slick-prev
+{
+    left: 50px;
+}
+.slick-next
+{
+    right: 50px;
+}
+.slick-prev,
+.slick-next
+{
+    z-index: 100;
+}
+
+
+/*--------------------------
+hover
+--------------------------*/
+.item-box{
+  border: 1px solid black;
+  width: 300px;
+}
+
+
+.item-link{
+  border: 1px solid orange;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.item-link a{
+  color: red;
+  text-align: center;
+}
+
+.item-box a:hover .item-link {
+  background-color: orange;
+  color: white;
+}
+
+.button, .result, .result1{
+  width: 200px;
+  height: 100px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  background: #66b6d5;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.button:hover + .result{
+  background: #E72458;
+}
+.button:hover + .result1{
+  background: #E72458;
+}
+
+.bl_hover {
+  border: 1px solid #000;
+  width: 300px;
+  height: 100px;
+  margin-top: 20px;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.bl_hover:hover {
+  text-decoration: none;
+  opacity: 0.5;
+}
+.bl_hover_link {
+  color: #000;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  /* width: 100%;
+  height: 100%; */
+}
+.bl_hover_text {
+  color: #000;
+}
+.bl_hover_text:hover {
+  text-decoration: none;
+}
+.on_hover {
+  text-decoration: underline;
+}
+
+/*商品紹介-------------------------------*/
+
+.item-box {
+  width: 80%;
+}
+.item-thum img {
+  width: 200px;
+  height: auto;
+}
+.item-detail {
+  background-color: #fff;
+  border: 1px solid #F05C23;
+  color: #F05C23;
+}
+.item-box a:hover .item-detail {
+  background-color: #F05C23;
+  color: #fff;
+}
+
+/*--------------------------
+フェードイン
+--------------------------*/
+
+.fade{
+  animation: fadeIn 5s ease 0.5s 1 normal;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
+}
+@keyframes fadeIn { /*animation-nameで設定した値を書く*/
+  0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+  100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+}
+
+/*--------------------------
+background-image
+--------------------------*/
+.back-img{
+  width: 200px;
+  background-image: url(../img/photo1.jpg);
+  background-size: 200px 200px;
+  background-position: bottom;
+}
+
+/*--------------------------
+ブロックまるごとふわっとさせたい
+--------------------------*/
+/* 「TopToBottom」の動作内容 */
+@keyframes TopToBottom {
+  0% {
+    opacity: 0;/* 透明 */
+  }
+  100% {
+    opacity: 1;/* 不透明 */
+  }
+}
+
+/* 「TopToBottom」を適用する箇所 */
+.effect-fade {
+  opacity: 0;/* ここを追加 */
+  animation-duration: 2s;/* アニメーション時間 */
+  animation-delay : 1s;/* 変化開始の時間 */
+  animation-name: TopToBottom;/* アニメーション名 */
+  animation-iteration-count: 1;/* アニメーションの繰り返し（無限）*/
+  animation-fill-mode: forwards; /*これで値を保持*/
+}
+
+/*--------------------------
+モーダル表示１
+--------------------------*/
+#modal-content {
+	width: 50% ;
+	margin: 0 ;
+	padding: 10px 20px ;
+	border: 2px solid #aaa ;
+	background: #fff ;
+	position: fixed ;
+	display: none ;
+	z-index: 2 ;
+}
+#modal-overlay {
+	z-index: 1 ;
+	display: none ;
+	position: fixed ;
+	top: 0 ;
+	left: 0 ;
+	width: 100% ;
+	height: 120% ;
+	background-color: rgba( 0,0,0, 0.75 ) ;
+}
+.button-link {
+	color: #00f ;
+	text-decoration: underline ;
+}
+.button-link:hover {
+	cursor: pointer ;
+	color: #f00 ;
+}
+
+/*--------------------------
+モーダル複数
+--------------------------*/
+
+
+/*--------------------------
+要素をinnerからはみ出して画面いっぱいに表示
+--------------------------*/
+.content1 {
+  border: 1px solid #000;
+}
+.inner {
+	width: 520px;
+	max-width: 100%;
+	margin: 0 auto;
+	background: #eee;
+}
+.full {
+	background: #26a69a;
+	padding: 4px 8px;
+  margin: 0 calc(50% - 50vw);
+	width: 100vw;
+}
+.full2 {
+  background: aqua;
+  margin: 0 calc(50% - 50vw);
+	padding: 4px calc(50vw - 50% + 8px);
+	width: 100vw;
+}
+.body {
+	padding: 4px 8px;
+	margin-top: 12px;
+}
+
+/*--------------------------
+グリッドレイアウト
+--------------------------*/
+.g1 {
+  border: 1px solid #000;
+  width: 300px;
+  height: 740px;
+}
+.g2 {
+  border: 1px solid #000;
+  width: 300px;
+  height: 374px;
+}
+.g3 {
+  border: 1px solid #000;
+  width: 763px;
+  height: 316px;
+}
+.g4 {
+  border: 1px solid #000;
+  width: 763px;
+  height: 249px;
+}
+.g5 {
+  border: 1px solid #000;
+  width: 763px;
+  height: 275px;
+}
+.g6 {
+  border: 1px solid #000;
+  width: 763px;
+  height: 287px;
+}
+.grid_wrapper {
+  width: 100%;
+}
+.grid_layout {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 18px 300px 39px 763px;
+  grid-template-rows: auto 30px auto 30px auto 30px auto 30px auto auto;
+}
+.grid1 {
+  grid-column: 2 / 21;
+  grid-row:1 / 6;
+}
+.grid2 {
+  grid-column: 2 / 3;
+  grid-row: 7 / 10;  
+}
+.grid3 {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+.grid4 {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+.grid5 {
+  grid-column: 4 / 5;
+  grid-row: 5 / 8;
+}
+.grid6 {
+  grid-column: 4 / 5;
+  grid-row: 9 / 11;
+}
+
+
+@media screen and (max-width: 768px) {
+  .g1 {
+    width: 360px;
+    height: 450px;
+  }
+  .g2 {
+    width: 360px;
+    height: 422px;
+  }
+  .g3 {
+    width:360px;
+    height: 674px;
+  }
+  .g4 {
+    width:360px;
+    height: 328px;
+  }
+  .g5 {
+    width:360px;
+    height: 492px;
+  }
+  .g6 {
+    width: 360px;
+    height: 328px;
+  }
+  .grid_layout {
+    display: grid;
+    grid-template-columns: 15px 360px 15px;
+    grid-template-rows: 450px 28px 422px 28px 674px 28px 328px 28px 492px 28px 328px;
+  }
+  .grid3 {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+  .grid1 {
+    grid-column: 2 / 3;
+    grid-row: 3;
+  }
+  .grid4 {
+    grid-column: 2 / 3;
+    grid-row: 5;
+  }
+  .grid5 {
+    grid-column: 2 / 3;
+    grid-row: 7;
+  }
+  .grid6 {
+    grid-column: 2 / 3;
+    grid-row: 9;
+  }
+  .grid2 {
+    grid-column: 2 / 3;
+    grid-row: 11;  
+  }
+}
+
+/*--------------------------
+アコーディオン
+--------------------------*/
+/* 開閉する要素 */
+.acdn-content
+{
+	width: 200px ;
+	height: 200px ;
+	background: #D36015 ;
+}
+
+.accordion {
+  width: 200px;
+  margin: 0 auto;
+}
+
+
+
+*, p{
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  background-color: purple;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+}
+.menu:hover,
+.menu:active,
+.menu.is-active {
+  background-color: black;
+}
+/* .contents {
+  display: none;
+  border: 1px solid black;
+  padding: 10px;
+  line-height: normal;
+  height: auto;
+  opacity: 1;
+  text-align: center;
+} */
+.contents {
+  text-align: center;
+  line-height: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: 0.4s;
+}
+
+.contents.is-open {
+  border: 1px solid black;
+  padding: 10px;
+  line-height: normal;
+  height: auto;
+  opacity: 1;
+}
+
+/*--------------------------
+リボン風の装飾(疑似要素)
+--------------------------*/
+.ribbon{
+  position:relative;
+  background: #6aa7cd;
+  padding: 1em;
+  width: 312px;
+  height: 50px;
+  box-shadow: 0px 3px 6px #00000029;
+  margin: 0 auto;
+  /* z-index: 2; */
+}
+.ribbon:before{
+  content: "";
+  position:absolute;
+  top: 16px;
+  left: 0;
+  width:0;
+  height:0;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+  border-width: 11px;
+  /* z-index: 0; */
+}
+
+.ribbon_pdf {
+  line-height: 19px;
+  height: 19px;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+.ribbon_pdf::before {
+  content: url(../img/pdf.svg);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.ribbon_img {
+  width: 323px;
+  height: 58px;
+  margin: 10px auto;
+  background-image: url(../img/ribbon5.png);
+  position: relative;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #000;
+}
+.ribbon_pdf2 {
+  line-height: 19px;
+  height: 19px;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  text-decoration: none;
+}
+.ribbon_pdf2::before {
+  content: url(../img/pdf.svg);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.ribbon3{
+  position:relative;
+  background: #6aa7cd;
+  padding: 1em;
+  width: 312px;
+  height: 50px;
+  box-shadow: 0px 3px 6px #00000029;
+  margin: 0 auto;
+  /* z-index: 2; */
+}
+.ribbon3:before{
+  content: url(../img/ribbon4.jpg);
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width:0;
+  height:0;
+}
+/*--------------------------
+select内容を選択したら表示
+--------------------------*/
+.section_fadein {
+  position: absolute;
+  display: none;
+}
+
+/* 表示スタイル（動作に無関係） */
+.section_fadein {
+  margin-top: 3rem;
+  border: 1px solid #ccc;
+  padding: 3rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+#select_fadein {
+  background: #D8DBE2;
+}
+
+/*--------------------------
+クリックで矢印反転(アニメーション)
+--------------------------*/
+.up_arrow {
+  background-color: rgb(255, 205, 40);
+  width: 312px;
+  height: 50px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+.up_arrow::before {
+  content: url(../img/up-arrow.png);
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+.down_arrow::before {
+  transition-duration: 0.4s;
+  transform: rotate(180deg);
+}
+.up_arrow_acdn {
+  width: 312px;
+  margin: 0 auto;
+  list-style: none;
+  display: none;
+  transition-duration: 0.4s;
+}
+.up_arrow_acdn li {
+  border: 1px solid #aaa;
+}
+
+/*--------------------------
+かぶりデザイン
+--------------------------*/
+
+.gray {
+  width: 100%;
+  background-color: #c7c4c4;
+  height: 200px;
+}
+.ly_ch {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #000;
+  margin-bottom: 30px;
+  position: relative;
+  margin-top: -100px;
+  /* top: -100px; */
+  
+}
+.ly_chwrap {
+  display: flex;
+  justify-content: center;
+}
+.ly_ch_1 {
+  width: 440px;
+  height: 300px;
+  background-color: rgb(199, 238, 243);
+  margin-bottom: 20px;
+}
+.ly_ch_2 {
+  width: 350px;
+  height: 300px;
+  background-color: #fdeadd;
+  z-index: 999;
+}
+.ly_cb {  
+  width: 330px;
+  height: 600px;
+  background-color: rgb(245, 236, 253);
+  margin: 0 auto;
+}
+@media screen and (max-width:768px) { 
+  .ly_ch {
+  }
+  .ly_chwrap {
+    display: block;
+  }
+  .ly_ch_1 {
+    width: 640px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  .ly_ch_2 {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .ly_cb {  
+    width: 330px;
+    height: 600px;
+  }
+}
+/*--------------------------
+画像アスペクト比固定
+--------------------------*/
+.ap-img {
+  width: 640px;
+  height: 300px;
+  margin-bottom: 10px;
+  
+}
+.ap-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*--------------------------
+スマホのときだけ電話番号リンク
+--------------------------*/
+@media(min-width: 768px){
+  .tel-sp a[href^="tel:"]{
+    pointer-events: none;
+  }
+}
+
+
+/*--------------------------
+幅の操作(レスポンシブ)
+--------------------------*/
+.haba-cont{
+  border: 1px solid #000;
+  width: 1000px;
+}
+.haba1 {
+  border: 1px solid #000;
+}
+.haba1 h3{
+  background-color: #cff5f1;
+}
+.haba-cont{
+  border: 1px solid #000;
+}
+.haba-sect{
+  border: 1px solid #000;
+}
+.haba-sect-div{
+  border: 1px solid #000;
+}
+.haba-last{
+  border: 1px solid #000;
+}
+.haba-h3 {
+  width: 1000px;
+}
+@media(max-width: 768px){
+  .respo {
+    max-width: 390px;
+  }
+}
+
+/*--------------------------
+スクロール
+--------------------------*/
+.width-scroll {
+  /* width: 1000px; */
+  overflow-x: scroll;
+  display: flex;
+}
+.width-scroll p {
+  min-width: 30%;
+  background-color: #aaa;
+  margin-right: 30px;
+}
+
+.image-scroll {
+  background-color: #c7c4c4;
+  padding: 5px;
+  overflow-x: scroll;
+  display: flex;
+}
+.image-scroll a {
+  display: block;
+  margin-right: 20px;
+}
