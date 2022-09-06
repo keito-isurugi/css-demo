@@ -853,3 +853,31 @@ select内容を選択したら表示
   /* word-wrap: break-word; */
   word-break: break-all;
 }
+
+.m-flex {
+  display: flex;
+  background-color: #66b6d5;
+  height: auto;
+  width: 300px;
+  gap: 30px;
+  border: 1px solid #000;
+}
+.p-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #66b6d5;
+  border: 1px solid #000;
+  /* height: 100px; */
+  width: 100px;
+  gap: 10px 10px;
+  padding: 10px;
+  align-items: flex-start;
+  align-content: flex-start
+}
+
+.c-flex {
+  height: 30px;
+  width: 40%;
+  border: 1px solid #000;
+}
