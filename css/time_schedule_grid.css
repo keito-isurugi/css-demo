@@ -1,0 +1,71 @@
+.time_schedule_grid_wrap{
+  padding: 20px;
+  border: 1px solid #000;
+  width: 50%;
+}
+
+/* 時間 */
+.time_schedule_grid_inner{
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px;
+  grid-template-columns: 150px 1fr;
+
+}
+
+.time_schedule_grid_time_wrap{
+
+}
+.time_schedule_grid_time_inner1{
+  border: 1px solid #000;
+}
+.time_schedule_grid_time_inner2{
+  border: 1px solid #000;
+}
+.time_schedule_grid_time_inner3{
+  border: 1px solid #000;
+}
+.time_schedule_grid_time_inner4{
+  border: 1px solid #000;
+}
+.time_schedule_grid_time{
+
+}
+.time_schedule_grid_time_inner{
+
+}
+.time_schedule_grid_time{
+
+}
+
+
+/* 予定 */
+.time_schedule_grid_schedule_wrap{
+
+}
+.time_schedule_grid_schedule_inner{
+
+}
+.time_schedule_grid_schedule_item_wrap1{
+  border: 1px solid #000;
+}
+.time_schedule_grid_schedule_item_wrap2{
+  border: 1px solid #000;
+}
+.time_schedule_grid_schedule_item_wrap3{
+  border: 1px solid #000;
+}
+.time_schedule_grid_schedule_item_wrap4{
+  border: 1px solid #000;
+}
+.time_schedule_grid_schedule_item{
+  
+}
+
+.padding {
+  padding: 10px;
+}
+
+.time_schedule_grid_schedule_item_content{
+  height: 50px;
+  border: 1px solid #000;
+}
