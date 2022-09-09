@@ -853,7 +853,41 @@ select内容を選択したら表示
   /* word-wrap: break-word; */
   word-break: break-all;
 }
-
+/*--------------------------
+heightを親要素いっぱいに広げる
+--------------------------*/
+.e1-height{
+  border: 1px solid #000;
+  height: 500px;
+  width: 500px;
+}
+.e2-height{
+  border: 1px solid rgb(249, 195, 195);
+  height: 100%;
+}
+.e3-height{
+  border: 1px solid rgb(121, 121, 2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.e3-height-h4{
+  background-color: rgb(181, 215, 246);
+  margin: 0;
+  flex-basis:50px
+}
+.e4-height{
+  background-color: rgb(229, 242, 198);
+  /* height: 100%; */
+  flex-grow: 1;
+  padding: 20px;
+}
+.e4-height-ptext{
+  
+}
+/*--------------------------
+flex子要素高さ固定
+--------------------------*/
 .m-flex {
   display: flex;
   background-color: #66b6d5;

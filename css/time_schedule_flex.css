@@ -34,7 +34,8 @@
   overflow-y: scroll;
   display: flex;
   align-items: flex-start;
-  flex: 1 1 auto;
+  flex: 1 auto;
+  /* flex: 1 1 auto; 余白用 */
 }
 .time_schedule_flex_schedule_inner {
   min-width: 100%;
@@ -43,6 +44,7 @@
   vertical-align: top;
   overflow: hidden;
   position: relative;
+  border: 1px solid #000;
 }
 .time_schedule_flex_schedule_line_wrap{
   border-top: #dadce0 1px solid;
@@ -59,14 +61,15 @@
   z-index: 3;
   pointer-events: none;
 }
-.time_schedule_flex_schedule_margin{
+/* 余白用 */
+/* .time_schedule_flex_schedule_margin{
   width: 8px;
   border-right: #dadce0 1px solid;
-}
-.time_schedule_flex_schedule_item_wrap{
+} */
+/* .time_schedule_flex_schedule_item_wrap{
   
-}
-.time_schedule_flex_schedule_item_wrap h2{
+} */
+/* .time_schedule_flex_schedule_item_wrap h2{
   clip: rect(1px,1px,1px,1px);
   height: 1px;
   overflow: hidden;
@@ -81,14 +84,14 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
-}
-.time_schedule_flex_schedule_item_margin {
+} */
+/* .time_schedule_flex_schedule_item_margin {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-}
+} */
 .time_schedule_flex_schedule_item {
   top: 0px;
   height: 94px;
