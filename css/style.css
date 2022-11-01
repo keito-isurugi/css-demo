@@ -915,3 +915,36 @@ flex子要素高さ固定
   width: 40%;
   border: 1px solid #000;
 }
+
+
+/*--------------------------
+flexBox
+--------------------------*/
+.flexbox_wrap{
+  display: flex;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+}
+.flexbox_date{
+  width: 10%;
+  margin: 0;
+}
+.flexbox_date_text{
+  margin: 0;
+}
+.flexbox_text_wrap{
+  display: flex;
+
+}
+.flexbox_text{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 3px;
+  margin: 0;
+}
+.flexbox_text_radius {
+  border: 1px solid #000;
+  border-radius: 50%;
+}
