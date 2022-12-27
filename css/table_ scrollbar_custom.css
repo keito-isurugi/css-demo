@@ -1,0 +1,33 @@
+.wrapper {
+  width: 300px;
+  overflow-x: scroll;
+}
+
+.content {
+ background-color: aqua;
+ width: 600px;
+}
+
+
+.scrollbar {
+ width: 300px;
+ height: 10px;
+ overflow-x: scroll;
+ overflow-y: hidden;
+}
+.inner {
+ height: 1px;
+ width: 600px;
+}
+
+
+
+.table_wrapper {
+  width: 300px;
+  overflow-x: scroll;
+  /* transform: rotateX(180deg); */
+}
+.table {
+  width: 600px;
+  /* transform: rotateX(180deg); */
+}

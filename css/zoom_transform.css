@@ -1,0 +1,43 @@
+.zoom-div {
+	width: 300px;
+	height: 300px;
+	border: 1px solid #000;
+	background-color: rgb(195, 171, 171);
+}
+.zoom1 {
+	zoom: 1;
+}
+.zoom05 {
+		zoom: 0.5;
+}
+.zoom-p {
+	width: 500px;
+	border: 1px solid #000;
+	background-color: rgb(183, 125, 125);
+}
+.zoom05-2 {
+		zoom: 0.5;
+		overflow: auto;
+}
+
+.transform-div {
+	width: 300px;
+	height: 300px;
+	border: 1px solid #000;
+	background-color: rgb(195, 171, 171);
+}
+.transform1 {
+	transform: scale(1, 1);
+}
+.transform05 {
+		transform: scale(0.5, 0.5);
+}
+.transform-p {
+	width: 500px;
+	border: 1px solid #000;
+	background-color: rgb(183, 125, 125);
+}
+.transform05-2 {
+		transform: scale(0.5, 0.5);
+		overflow: auto;
+}
