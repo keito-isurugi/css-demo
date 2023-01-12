@@ -20,6 +20,14 @@
 		overflow: auto;
 }
 
+.transform-div-wrap {
+	background-color: aqua;
+	width: 150px;
+	height: 150px;
+	/* width: 300px;
+	height: 300px; */
+}
+
 .transform-div {
 	width: 300px;
 	height: 300px;
@@ -30,7 +38,10 @@
 	transform: scale(1, 1);
 }
 .transform05 {
+		width: 300px;
+		height: 300px;
 		transform: scale(0.5, 0.5);
+		transform-origin: 0px 0px;
 }
 .transform-p {
 	width: 500px;
